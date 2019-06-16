@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA243431397C9888DF1BF48A /* libPods-Genecards-Pro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CECAB7E18076E2A6AB207D /* libPods-Genecards-Pro.a */; };
 		F331EA2F22AD4DB90033B0D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F331EA2E22AD4DB90033B0D2 /* AppDelegate.m */; };
 		F331EA3222AD4DB90033B0D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F331EA3122AD4DB90033B0D2 /* ViewController.m */; };
 		F331EA3522AD4DB90033B0D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F331EA3322AD4DB90033B0D2 /* Main.storyboard */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2461E325ACBFA6511146EC51 /* Pods-Genecards-Pro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genecards-Pro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Genecards-Pro/Pods-Genecards-Pro.debug.xcconfig"; sourceTree = "<group>"; };
+		D12E10BC6C6CEFEB81B2DE79 /* Pods-Genecards-Pro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genecards-Pro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Genecards-Pro/Pods-Genecards-Pro.release.xcconfig"; sourceTree = "<group>"; };
+		D3CECAB7E18076E2A6AB207D /* libPods-Genecards-Pro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Genecards-Pro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F331EA2A22AD4DB90033B0D2 /* Genecards-Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Genecards-Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F331EA2D22AD4DB90033B0D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F331EA2E22AD4DB90033B0D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA243431397C9888DF1BF48A /* libPods-Genecards-Pro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C7398F3FE4C42AB54071EC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2461E325ACBFA6511146EC51 /* Pods-Genecards-Pro.debug.xcconfig */,
+				D12E10BC6C6CEFEB81B2DE79 /* Pods-Genecards-Pro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AE581DF84FF66E5A4830E498 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3CECAB7E18076E2A6AB207D /* libPods-Genecards-Pro.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F331EA2122AD4DB90033B0D2 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +109,8 @@
 				F331EA4822AD4DBA0033B0D2 /* Genecards-ProTests */,
 				F331EA5322AD4DBA0033B0D2 /* Genecards-ProUITests */,
 				F331EA2B22AD4DB90033B0D2 /* Products */,
+				9C7398F3FE4C42AB54071EC8 /* Pods */,
+				AE581DF84FF66E5A4830E498 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +166,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F331EA5922AD4DBA0033B0D2 /* Build configuration list for PBXNativeTarget "Genecards-Pro" */;
 			buildPhases = (
+				32F63C91E5286AA00359B0CE /* [CP] Check Pods Manifest.lock */,
 				F331EA2622AD4DB90033B0D2 /* Sources */,
 				F331EA2722AD4DB90033B0D2 /* Frameworks */,
 				F331EA2822AD4DB90033B0D2 /* Resources */,
@@ -259,6 +284,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32F63C91E5286AA00359B0CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Genecards-Pro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F331EA2622AD4DB90033B0D2 /* Sources */ = {
@@ -437,35 +487,39 @@
 		};
 		F331EA5A22AD4DBA0033B0D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2461E325ACBFA6511146EC51 /* Pods-Genecards-Pro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6853S6CV8;
 				INFOPLIST_FILE = "Genecards-Pro/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "idea.game.sucess.Genecards-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F331EA5B22AD4DBA0033B0D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D12E10BC6C6CEFEB81B2DE79 /* Pods-Genecards-Pro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6853S6CV8;
 				INFOPLIST_FILE = "Genecards-Pro/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "idea.game.sucess.Genecards-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
